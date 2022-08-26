@@ -1,30 +1,15 @@
-.barraNavegacion {
-    width: 50%;
-    background-color: #c69ec8;
-    border-radius: 15px;
-    font-size: 16px;
-    text-transform: uppercase;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: 0%;
-  }
-  
-  .barraNavegacion ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-  }
-  
-  .barraNavegacion ul li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 5px 10px;
-  }
-  
-  .barraNavegacion ul li a:hover {
-    background-color: #721278;
-    transform: scale(1.3);
-    border-radius: 15px;
-  }
+.logobazar {
+    max-width: 20%;
+    max-height: 20%;
+    min-width: 120px;
+    min-height: 70px;
+    padding-right: 15px;
+}
+
+.logoCarrito {
+    max-width: 8%;
+    max-height: 8%;
+    min-width: 100px;
+    min-height: 50px;
+    padding-left: 5px;
+}

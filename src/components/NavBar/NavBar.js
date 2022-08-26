@@ -1,16 +1,41 @@
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import logobazar from '../../images/logobazar.png'; 
+import logoCarrito from '../../images/carrito.png';
 
-
-const NavBar = () => {
-    return(
-        <nav className="barraNavegacion">
-          <ul>
-            <li><a href="">Juegos completos</a></li>
-            <li><a href="">Vajilla Tsuji</a></li>
-            <li><a href="">Vajilla Verbano</a></li>
-            <li><a href="">Carrito</a></li>
-          </ul>
-        </nav>
-      );
+function NavScrollExample() {
+  return (
+    <Navbar bg="light" expand="lg">
+      <Container fluid>
+        <img src={logobazar} alt="logo" className="logobazar" id="logoBazar"/>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '150px' }}
+            navbarScroll
+          >
+            <Nav.Link href="#action2">VAJILLA TSUJI</Nav.Link>
+            <Nav.Link href="#action2">VAJILLA VERBANO</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+              <Form.Control
+              type="search"
+              placeholder="Buscar"
+              className="me-2"
+              aria-label="Search"
+              />
+              <Button variant="outline-success">Buscar</Button>
+          </Form>
+          <img src={logoCarrito} alt="logocarrito" id="" className="logoCarrito"/>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default NavBar;
+export default NavScrollExample;
+

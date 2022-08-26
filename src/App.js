@@ -1,14 +1,18 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import './components/NavBar/NavBar.css'
+
 /* traigo componentes */
 
-import NavBar from "./components/NavBar/NavBar"
+import './components/NavBar/NavBar.css'
+import NavScrollExample from "./components/NavBar/NavBar"
 
 class App extends React.Component {
   render() {
     return ( 
-      <NavBar />
+      <div>
+        <NavScrollExample /> 
+      </div>
     );
   }
 }
