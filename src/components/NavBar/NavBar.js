@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logobazar from '../../images/logobazar.png'; 
-import logoCarrito from '../../images/carrito.png';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavScrollExample() {
   return (
@@ -30,7 +30,9 @@ function NavScrollExample() {
               />
               <Button variant="outline-success">Buscar</Button>
           </Form>
-          <img src={logoCarrito} alt="logocarrito" id="" className="logoCarrito"/>
+          <div>
+            <CartWidget className="logoCarrito"/>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
