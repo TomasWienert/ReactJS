@@ -21,6 +21,9 @@ function NavScrollExample() {
             <Nav.Link href="#action2">VAJILLA TSUJI</Nav.Link>
             <Nav.Link href="#action2">VAJILLA VERBANO</Nav.Link>
           </Nav>
+          <div className='cartWidgetContainer'>
+            <CartWidget className="logoCarrito"/>
+          </div>
           <Form className="d-flex">
               <Form.Control
               type="search"
@@ -30,9 +33,6 @@ function NavScrollExample() {
               />
               <Button variant="outline-success">Buscar</Button>
           </Form>
-          <div>
-            <CartWidget className="logoCarrito"/>
-          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

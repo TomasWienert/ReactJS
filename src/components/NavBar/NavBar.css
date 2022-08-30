@@ -13,3 +13,7 @@
     min-height: 50px;
     padding-left: 5px;
 }
+
+.cartWidgetContainer{
+    max-width: 120px;
+}

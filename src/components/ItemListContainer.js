@@ -1,11 +1,16 @@
 import React from "react";
+import CardComponent from "./cardcomponent/cardcomponent";
+import Container from 'react-bootstrap/Container';
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({title,parrafo}) => {
     return (
-        <div>
-            <h1>{props.title}</h1>
-            <p>{props.parrafo}</p>  
-        </div> 
+        <Container>
+            <div>
+                <h1>{title}</h1>
+                <p>{parrafo}</p>  
+                <CardComponent />
+            </div> 
+        </Container>   
     );
 };
 

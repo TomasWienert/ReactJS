@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 
-export default function ProductCard(props) {
+const CardComponent = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -29,3 +29,5 @@ export default function ProductCard(props) {
     </Card>
   );
 }
+
+export default CardComponent;
