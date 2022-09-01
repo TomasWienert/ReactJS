@@ -17,8 +17,13 @@ class ItemCount extends React.Component {
     }
 
     decrementCounter = () => {
-        this.setState ({counter: this.state.counter - 1})
+        if (this.state.counter === 0) {
+        alert("No se puede seleccionar menos de 0 productos")    
+        }else{
+        this.setState ({counter: this.state.counter - 1}) 
+        }
     }
+
 
     render() {
         return (
