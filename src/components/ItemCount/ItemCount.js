@@ -1,44 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import './ItemCount.css';
 import Button from 'react-bootstrap/Button';
 
-class ItemCount extends React.Component {
-    constructor () {
-        super();
-        this.state = {
-            counter: 0,
-        };
+const ItemCount = () => {
+    
+    const [counter, setCounter] = useState(0);
 
-        /* this.incrementCounter = this.incrementCounter.biend(this);   */
+    const incrementCounter = () => {
+        setCounter (counter + 1)
     }
 
-    incrementCounter = () => {
-        this.setState ({counter: this.state.counter + 1})
-    }
-
-    decrementCounter = () => {
-        if (this.state.counter === 0) {
+    const decrementCounter = () => {
+        if (counter === 0) {
         alert("No se puede seleccionar menos de 0 productos")    
         }else{
-        this.setState ({counter: this.state.counter - 1}) 
+        setCounter (counter - 1) 
+        }
+    }
+    
+    /* Pongo un valor de stock inicial ahora para hacer el ejercicio */
+
+    const stock = 5;
+
+    /* determino si hay stock suficiente para comprar producto */
+
+    const addItem = () => {
+        if (counter > stock) {
+            alert("Stock insuficiente")
+        }else{
+            console.log(counter)
+            alert("Agregó " + counter + " unidades al carrito")
         }
     }
 
-
-    render() {
-        return (
-            <div className="counterGeneral">
-                <div className="counter">
-                    <Button variant="danger" onClick={this.decrementCounter} className="increment">-</Button>
-                    <p className="counterNumber">Cantidad: {this.state.counter}</p>
-                    <Button variant="success" onClick={this.incrementCounter} className="decrement">+</Button>
-                </div>
-                <div>
-                    <Button variant="primary">Agregar al carrito</Button>
-                </div>
+    return (
+        <div className="counterGeneral">
+            <div className="counter">
+                <Button variant="danger" onClick= {decrementCounter} className="increment">-</Button>
+                <div className="counterNumber">
+                    <p className="in">Cantidad: {counter}</p>
+                    <p className="in">Stock: {stock}</p>
+                </div>    
+                <Button variant="success" onClick={incrementCounter} className="decrement">+</Button>
             </div>
-        )
-    }
+            <div className="agregarCarrito">
+                <Button variant="primary" onClick={addItem}>Agregar al carrito</Button>
+            </div>
+        </div>
+    )
+    
+
 }
 
 export default ItemCount;

@@ -13,25 +13,22 @@ import NavScrollExample from "./components/NavBar/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemCount from "./components/ItemCount/ItemCount"
 
-
-class App extends React.Component {
-  render() {
-    return ( 
-      <div>
-        <div className="header">
-          <NavScrollExample /> 
-        </div>
-        <div>
-          <ItemListContainer 
-          title="Aqui encontrará todos los productos" 
-          parrafo="Cada producto mostrará nombre, una imagen y su precio, ademas de un contador 
-          para elegir cuantos agregará al carrito"/>
-        </div>
-        <ItemCount />
+const App = () => {
+  return ( 
+    <div>
+      <div className="header">
+        <NavScrollExample /> 
       </div>
-      
-    );
-  }
+      <div>
+        <ItemListContainer 
+        title="Aqui encontrará todos los productos" 
+        parrafo="Cada producto mostrará nombre, una imagen y su precio, ademas de un contador 
+        para elegir cuantos agregará al carrito"/>
+      </div>
+      <ItemCount />
+    </div>
+    
+  );
 }
 
 export default App;
