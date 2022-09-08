@@ -4,30 +4,33 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import ItemCount from "../ItemCount/ItemCount"
 
-
-const CardComponent = () => {
+const Item = ({data}) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 , margin: 10}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="150"
-          image=""
+          height="250"
+          image={data.avatar_url}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {/* {descuentoTsuji.nombre} */}
+            {data.login}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="div">
+            {data.login} {/* price */}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {data.html_url}
           </Typography>
         </CardContent>
       </CardActionArea>
+      <ItemCount />
     </Card>
   );
 }
 
-export default CardComponent;
+export default Item;

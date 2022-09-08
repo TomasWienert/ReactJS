@@ -24,7 +24,7 @@ const ItemCount = () => {
 
     /* determino si hay stock suficiente para comprar producto */
 
-    const addItem = () => {
+    const onAdd = () => {
         if (counter > stock) {
             alert("Stock insuficiente")
         }else{
@@ -32,6 +32,11 @@ const ItemCount = () => {
             alert("Agregó " + counter + " unidades al carrito")
         }
     }
+
+    const agregarCantidad = () => {
+        onAdd (counter)
+    }
+
 
     return (
         <div className="counterGeneral">
@@ -44,7 +49,7 @@ const ItemCount = () => {
                 <Button variant="success" onClick={incrementCounter} className="decrement">+</Button>
             </div>
             <div className="agregarCarrito">
-                <Button variant="primary" onClick={addItem}>Agregar al carrito</Button>
+                <Button variant="primary" onClick={agregarCantidad}>Agregar al carrito</Button>
             </div>
         </div>
     )

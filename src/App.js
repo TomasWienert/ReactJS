@@ -10,8 +10,8 @@ import './App.css';
 
 import './components/NavBar/NavBar.css'
 import NavScrollExample from "./components/NavBar/NavBar"
-import ItemListContainer from "./components/ItemListContainer"
-import ItemCount from "./components/ItemCount/ItemCount"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+
 
 const App = () => {
   return ( 
@@ -25,7 +25,6 @@ const App = () => {
         parrafo="Cada producto mostrará nombre, una imagen y su precio, ademas de un contador 
         para elegir cuantos agregará al carrito"/>
       </div>
-      <ItemCount />
     </div>
     
   );
