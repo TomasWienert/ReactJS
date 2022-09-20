@@ -1,5 +1,8 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+
 import './App.css';
 
 /* traigo base de datos */
@@ -11,21 +14,20 @@ import './App.css';
 import './components/NavBar/NavBar.css'
 import NavScrollExample from "./components/NavBar/NavBar"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer"
 
 
 const App = () => {
   return ( 
-    <div>
+    <BrowserRouter>
       <div className="header">
         <NavScrollExample /> 
       </div>
-      <div>
-        <ItemListContainer 
-        title="Aqui encontrará todos los productos" 
-        parrafo="Cada producto mostrará nombre, una imagen y su precio, ademas de un contador 
-        para elegir cuantos agregará al carrito"/>
-      </div>
-    </div>
+      <Routes>
+        <Route path = "/" element = {<ItemListContainer />} />
+        <Route path = "/detail/:id" element = {<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
     
   );
 }

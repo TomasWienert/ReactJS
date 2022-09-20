@@ -5,12 +5,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logobazar from '../../images/logobazar.png'; 
 import CartWidget from '../CartWidget/CartWidget';
+/* import {Link} from "react-router-dom"; */
 
 function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <img src={logobazar} alt="logo" className="logobazar" id="logoBazar"/>
+        {/* <Nav.Link to = "/"> */}
+          <img src={logobazar} alt="logo" className="logobazar" id="logoBazar"/>
+        {/* </Nav.Link> */}
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
