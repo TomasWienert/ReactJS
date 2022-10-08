@@ -1,7 +1,33 @@
 
-/* constructor para todos los articulos */
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-class producto {
+import { getFirestore } from "firebase/firestore";
+
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyA0sCenhGAsjjUXlLEDL5yXkEEblW6Sv7k",
+  authDomain: "databasereact-cfb98.firebaseapp.com",
+  projectId: "databasereact-cfb98",
+  storageBucket: "databasereact-cfb98.appspot.com",
+  messagingSenderId: "320368398402",
+  appId: "1:320368398402:web:8b23552b2a391933375ddb"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);
+
+
+
+
+
+
+/* class producto {
     constructor(id, marca, nombre, tipo, precio, imagen) {
         this.id = id
         this.marca = marca
@@ -41,7 +67,7 @@ const juegoCafeVerbano3 = new producto(20, "verbano", "juego cafe", "juego de ca
 const descuentoTsuji = new producto(21, "tsuji", "juego completo", "set completo", 11050, "./images/vajilla_tsuji.jpg")
 const descuentoVerbano = new producto(22, "verbano", "juego completo", "set completo", 9556, "./images/vajilla_verbano.jpg")
 
-/* tengo que hacer una lista con todos los productos */
+
 
 const listaProductos = [
     platoPlayoTsuji1,
@@ -64,4 +90,4 @@ const listaProductos = [
     juegoCafeVerbano1,
     juegoCafeVerbano2,
     juegoCafeVerbano3
-]
+] */

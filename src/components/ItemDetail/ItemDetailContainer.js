@@ -23,12 +23,13 @@ const ItemDetailContainer = () => {
 
     }, [id]);
 
-    return <div>{user.map(item => {
-        return (
-            <ItemDetail data = {item}/>
-        )
-    })}</div>;
+        
+    return (
+            <ItemDetail data = {user}/>
+        );
+    
 
 }
 
 export default ItemDetailContainer;
+

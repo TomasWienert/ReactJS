@@ -6,7 +6,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Link} from "react-router-dom";
 import './ItemList.css';
-
+import { collection, query, getDocs } from "firebase/firestore";
+import { db } from "../firebase/dataBase";
 
 const ItemList = () => {
 
@@ -15,10 +16,24 @@ const ItemList = () => {
     /* uso valor buleano para desaparecer el spinner cuando ya cargó la pagina */
     const [loading, setLoading] = useState (false);  
 
-    const loadApi = () => {
+    /* const loadApi = () => {
         fetch('https://api.github.com/users')
         .then(response => response.json())
         .then(json => setUsers(json))
+    } */
+
+    const loadApi = async () => {
+        const q = query(collection(db,"products"));
+
+        const docs = [];
+
+        const querySnapshot = await getDocs (q);
+        querySnapshot.forEach((doc) => {
+
+            docs.push({...doc.data(), id: doc.id });
+
+        });
+        setUsers(docs);
     }
 
     /* traigo info de la API de github para probar en la card */

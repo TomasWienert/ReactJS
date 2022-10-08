@@ -5,15 +5,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logobazar from '../../images/logobazar.png'; 
 import CartWidget from '../CartWidget/CartWidget';
-/* import {Link} from "react-router-dom"; */
+import {Link} from "react-router-dom";
 
 function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        {/* <Nav.Link to = "/"> */}
+        <Link to = "/">
           <img src={logobazar} alt="logo" className="logobazar" id="logoBazar"/>
-        {/* </Nav.Link> */}
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -21,8 +21,9 @@ function NavScrollExample() {
             style={{ maxHeight: '150px' }}
             navbarScroll
           >
-            <Nav.Link href="#action2">VAJILLA TSUJI</Nav.Link>
-            <Nav.Link href="#action2">VAJILLA VERBANO</Nav.Link>
+            <Link to = "/">INICIO</Link>
+            <Link to = "/">VAJILLA VERBANO</Link>
+            <Link to = "/">VAJILLA VERBANO</Link>
           </Nav>
           <div className='cartWidgetContainer'>
             <CartWidget className="logoCarrito"/>
