@@ -12,11 +12,11 @@ const ItemDetail = ({data}) => {
         <Container fluid className="ItemDetail">
             <Row>
                 <Col md={6}>
-                    <h1>{data.name}</h1>
-                    <img src={data.avatar_url} alt=""/>
+                    <h1>{data.nombre}</h1>
+                    <img src={data.img} alt=""/>
                 </Col>
                 <Col md={6}>
-                    <h1>{data.location}</h1>
+                    <h1>{data.marca}</h1>
                     <p></p>    
                 </Col>
             </Row>

@@ -5,10 +5,6 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import './App.css';
 
-/* traigo base de datos */
-
-
-
 /* traigo componentes */
 
 import './components/NavBar/NavBar.css'

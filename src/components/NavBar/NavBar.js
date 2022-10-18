@@ -21,7 +21,7 @@ function NavScrollExample() {
             style={{ maxHeight: '150px' }}
             navbarScroll
           >
-            <Link to = "/">INICIO</Link>
+            <Link to = "/" style = {{textDecoration:"none"}}>INICIO</Link>
             <Link to = "/">VAJILLA VERBANO</Link>
             <Link to = "/">VAJILLA VERBANO</Link>
           </Nav>
